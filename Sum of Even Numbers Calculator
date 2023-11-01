@@ -1,0 +1,20 @@
+# Get the user's input for the upper limit (X)
+while True:
+    try:
+        X = int(input("Please enter a number (up to 1000) to calculate the sum of even numbers from 1 to that number: "))
+        if 1 <= X <= 1000:
+            break
+        else:
+            print("Please enter a number between 1 and 1000.")
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+
+# Initialize a variable to store the sum of even numbers
+even_sum = 0
+
+# Iterate through the range from 1 to X and add even numbers to the sum
+for number in range(2, X + 1, 2):
+    even_sum += number
+
+# Display the result
+print("The sum of even numbers from 1 to", X, "is:", even_sum)
